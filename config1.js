@@ -1,7 +1,8 @@
 module.exports = {
-    consumer_key: ''
-  , consumer_secret: ''
-  , access_token: ''
-  , access_token_secret: ''
+  consumer_key: '',
+  consumer_secret: '',
+  access_token: '',
+  access_token_secret: '',
+  handle: '' // account you want to grab
 }
 

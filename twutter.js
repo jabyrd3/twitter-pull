@@ -6,7 +6,7 @@ var cursor = undefined;
 var cursorCount = 0;
 var getWithCursor = function(cursor){        
     if(cursorCount < 3){
-        ping.get('statuses/user_timeline', { screen_name: '@profdavidflint', max_id: cursor, count: 200 },  function (err, reply) {
+        ping.get('statuses/user_timeline', { screen_name: T.handle, max_id: cursor, count: 200 },  function (err, reply) {
             for(x = 0; x < reply.length; x++){
                 console.log(reply[x].text); 
                 if(x === reply.length - 1){
@@ -19,7 +19,7 @@ var getWithCursor = function(cursor){
     }
 }
 
-ping.get('statuses/user_timeline', { screen_name: '@profdavidflint', count: 200 },  function (err, reply) {
+ping.get('statuses/user_timeline', { screen_name: T.handle, count: 200 },  function (err, reply) {
     for(x = 0; x < reply.length; x++){
         console.log(reply[x].text);
         if(x === reply.length - 1){
